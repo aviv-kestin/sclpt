@@ -1,0 +1,146 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body Styling */
+body {
+    font-family: 'Body', sans-serif;
+    overflow-x: hidden;
+    background:url(drum.png) no-repeat center center;
+    background-size: 110%;
+}
+
+.image-container {
+    display: flex;
+    justify-content: center; /* Center horizontally */
+    align-items: center;    /* Center vertically */
+    width: 100%;            /* Make the container span the full width */
+    padding-top: 5vh;         /* Add some spacing above and below the image */
+}
+
+.image-container img {
+    max-width: 50%;         /* Adjust image size as needed */
+    height: auto;           /* Maintain aspect ratio */
+}
+
+/* Header */
+header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 13vh;
+    background-color: black;
+    z-index: 10;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 2rem;
+}
+
+header .logo img {
+    height: 5.7vh;
+}
+
+header nav ul {
+    display: flex;
+    list-style: none;
+    gap: 7vw;
+}
+
+header nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-size: 1.6vw;
+    font-family: 'Main', sans-serif;
+}
+
+/* Dropdown Menu */
+.dropdown {
+    position: relative;
+}
+
+.dropdown-menu {
+    position: absolute;
+    top: 100%;
+    left: -1.25vw;
+    display: none;
+    background-color: black;
+    padding-top: 1.25rem;
+    margin: 0;
+    list-style: none;
+    z-index: 10;
+    width: 9vw;
+    text-align: center;
+}
+
+.dropdown-menu li a {
+    display: block;
+    padding: 1.25rem 1rem;
+    text-decoration: none;
+    color: white;
+    font-size: 1.6vw;
+    font-family: 'Main', sans-serif;
+    background-color: black;
+    white-space: nowrap;
+}
+
+.dropdown-menu li a:hover {
+    background-color: #333;
+}
+
+.dropdown:hover .dropdown-menu {
+    display: block;
+}
+
+/* Main Content */
+main {
+    margin-top: 13vh;
+    text-align: center;
+    color: white;
+    padding: 2rem;
+}
+
+.title {
+    font-family: 'Main', sans-serif;
+    font-size: 4rem;
+    margin-bottom: 2rem;
+}
+
+.description {
+    font-family: 'Body', sans-serif;
+    font-size: 1.2vw;
+    line-height: 1.5;
+    max-width: 60%;
+    margin: 0 auto;
+    text-align: left;
+}
+
+.image-container {
+    margin-top: 2rem;
+}
+
+.image-container img {
+    width: 40vw;
+    height: auto;
+    border-radius: 10px;
+}
+
+/* Font Face */
+@font-face {
+    font-family: 'Main';
+    src: url('./OCR-XTrial-Light.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Body';
+    src: url('./MatterSemiMono-TRIAL-Light.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+
